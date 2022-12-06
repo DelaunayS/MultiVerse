@@ -1,0 +1,16 @@
+@{
+    ViewBag.Title = @ViewData["Title"];
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<h1>Livre Id: @ViewData["Id"]</h1>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">@ViewData["Title"]</h5>
+        <p class="card-text">@ViewData["Author"], @ViewData["Year"]</p>
+        <p class="card-text">@ViewData["Price"] €</p>
+    </div>
+</div>
+
+<a class="btn btn-primary" href="http://localhost:5000/Livres">Liste des livres</a>

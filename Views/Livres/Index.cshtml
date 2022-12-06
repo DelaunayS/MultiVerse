@@ -1,0 +1,18 @@
+@{
+    ViewBag.Title = "Liste des livres";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Listes des livres</h1>
+
+@foreach (var livre in ViewData["Livres"] as List<MvcLibrary.Models.Livre>)
+{
+    String delete=String.Format("http://localhost:5000/Livres/Supprimer/{0}",@livre.Id);
+    String detail=String.Format("http://localhost:5000/Livres/{0}",@livre.Id);
+    
+    <div class="container border border-secondary m-2 p-2">
+        <h5>@livre.Title</h5>
+        <a href=@detail class="btn btn-info">Detail</a>
+        <a href=@delete class="btn btn-danger">Supprimer</a>
+    </div>
+
+}

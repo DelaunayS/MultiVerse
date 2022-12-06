@@ -1,0 +1,26 @@
+@{
+    ViewBag.Title = "Ajout de livre";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Ajout de livre</h1>
+
+<form action="http://localhost:5000/Livres/ValiderAjouterLivre" >
+    <div class="form-group">
+        <label for="title">Titre</label>
+        <input type="text"  class="form-control" id="title" name="Title" aria-describedby="titreHelp" placeholder="Titre">
+    </div>
+    <div class="form-group">
+        <label for="author">Auteur</label>
+        <input type="text" class="form-control" id="author" name="Author" aria-describedby="auteurHelp" placeholder="Auteur">
+    </div>
+     <div class="form-group">
+        <label for="year">Année</label>
+        <input type="number" class="form-control" id="year" name="Year" aria-describedby="anneeHelp" placeholder="Annee">
+    </div>
+     <div class="form-group">
+        <label for="price">Prix</label>
+        <input type="number" class="form-control" id="price" name ="Price" aria-describedby="prixHelp" placeholder="Prix">
+    </div>
+    <button type="submit" class="btn btn-primary">Valider</button>
+</form>
